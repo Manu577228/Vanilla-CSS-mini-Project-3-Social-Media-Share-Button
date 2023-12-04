@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  display: grid;
+  height: 100vh;
+  place-items: center;
+  background: #000;
+}
+
+.main_div {
+  position: relative;
+  height: 65px;
+  width: 250px;
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.35);
+}
+
+.main_div::before {
+  content: "share";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  color: #34495e;
+  font-size: 27px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s linear;
+}
+
+.main_div:hover::before {
+  left: -250px;
+}
+
+.main_div .social_media {
+  position: absolute;
+  top: 0;
+  right: -250px;
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: all 0.4s ease-in-out;
+}
+
+.main_div:hover .social_media {
+  right: 0;
+}
+
+.social_media i {
+  font-size: 22px;
+  color: #34495e;
+  transition: all 0.3s linear;
+}
+
+.social_media i:hover {
+  transform: scale(1.1);
+}
